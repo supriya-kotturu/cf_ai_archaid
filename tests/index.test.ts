@@ -9,10 +9,10 @@ import worker from "../src/server";
 
 declare module "cloudflare:test" {
   // Controls the type of `import("cloudflare:test").env`
-  interface ProvidedEnv extends Env {}
+  interface ProvidedEnv extends Env { }
 }
 
-describe("Chat worker", () => {
+describe("Cloud Architect worker", () => {
   it("responds with Not found", async () => {
     const request = new Request("http://example.com");
     // Create an empty context to pass to `worker.fetch()`
